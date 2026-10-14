@@ -18,6 +18,7 @@ describe('CNPJ sanitize and validation', function () {
         ['12ABC34501DE35', '12ABC34501DE35'],
         ['12.ABC.345/01DE-35', '12ABC34501DE35'],
         ['12.abc.345/01de-35', '12ABC34501DE35'],
+        ['00.000.000/E08G-12', '00000000E08G12'], // real: Banco do Brasil branch, issued 2026-07-31
     ]);
 
     it('rejects invalid CNPJs', function (?string $input) {
