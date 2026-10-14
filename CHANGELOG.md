@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-cnpj` will be documented in this file.
 
+## 1.0.1 - 2026-10-13
+
+- Tests: add a real alphanumeric CNPJ (`00.000.000/E08G-12`) to the validation dataset, confirmed against the live Minha Receita API
+
+No changes to the package code.
+
 ## 1.0.0 - 2026-10-13
 
 Initial release.
