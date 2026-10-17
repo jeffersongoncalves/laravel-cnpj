@@ -4,10 +4,12 @@ namespace JeffersonGoncalves\Cnpj\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use JeffersonGoncalves\Cnpj\CnpjServiceProvider;
+use JeffersonGoncalves\PestPluginDatabaseMigrations\LoadsPackageMigrations;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
+    use LoadsPackageMigrations;
     use RefreshDatabase;
 
     protected function getPackageProviders($app)
@@ -53,6 +55,6 @@ class TestCase extends Orchestra
 
     protected function defineDatabaseMigrations(): void
     {
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadPackageMigrations(CnpjServiceProvider::class);
     }
 }
