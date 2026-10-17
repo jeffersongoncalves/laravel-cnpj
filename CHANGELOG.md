@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-cnpj` will be documented in this file.
 
+## 1.0.2 - 2026-10-17
+
+The migration now ships as `create_cnpj_table.php.stub`, like the other packages. Publishing is unchanged: `php artisan vendor:publish --tag="cnpj-migrations"`.
+
 ## 1.0.1 - 2026-10-13
 
 - Tests: add a real alphanumeric CNPJ (`00.000.000/E08G-12`) to the validation dataset, confirmed against the live Minha Receita API
